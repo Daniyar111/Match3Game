@@ -95,8 +95,16 @@ class _BlocProviderInherited<T> extends InheritedWidget {
 ///   This is much easier to read and to complement.
 
 
-//typedef BlocProvider _BuildWithChild(Widget child);
-//
-//Widget blocsTree(List<_BuildWithChild> childlessBlocs, {@required Widget child}){
-//  return childlessBlocs.reversed.fold<Widget>(child, combine)
-//}
+typedef BlocProvider _BuildWithChild(Widget child);
+
+Widget blocsTree(List<_BuildWithChild> childlessBlocs, {@required Widget child}){
+
+    return childlessBlocs.reversed.fold<Widget>(child, (Widget nextChild, _BuildWithChild childlessBloc) => childlessBloc(nextChild));
+}
+
+_BuildWithChild blocTreeNode<T extends BlocBase>(T bloc){
+
+  return (Widget child){
+    return BlocProvider<T>(bloc: bloc, child: child,);
+  };
+}
