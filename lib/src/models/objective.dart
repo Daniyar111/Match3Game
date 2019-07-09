@@ -17,6 +17,7 @@ class Objective extends Object{
 
     // Retrieve the type by its name (as a String)
     type = TileType.values.firstWhere((e) => e.toString().split('.')[1] == parts[1]);
+    print('Objective class type $type');
     initialValue = int.parse(parts[0]);
 
     reset();

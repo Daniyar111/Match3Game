@@ -13,7 +13,7 @@ import '../utils/array_2d.dart';
 ///  - number of rows
 ///  - list of objectives
 
-class Level{
+class Level extends Object{
 
   final int _index;
   Array2d grid;
@@ -52,6 +52,8 @@ class Level{
         grid[row.index][cell.index] = cell.value;
       });
     });
+
+    print('Grid level -> ${dumpArray2d(grid)}');
 
     // Retrieve the objectives
     _objectives = (json['objectives'] as List).map((item) => Objective(item)).toList();
