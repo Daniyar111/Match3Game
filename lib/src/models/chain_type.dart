@@ -1,0 +1,4 @@
+enum ChainType{
+  horizontal,
+  vertical
+}

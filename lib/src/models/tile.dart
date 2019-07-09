@@ -119,13 +119,13 @@ class Tile extends Object{
     x = level.boardLeft + col * level.tileWidth;
     y = bottom - row * level.tileHeight;
 
-    print('Tile class setPosition level.boardTop ${level.boardTop}, '
-        'level.boardLeft ${level.boardLeft}, '
-        'level.numberOfRows ${level.numberOfRows}, '
-        'level.numberOfCols ${level.numberOfCols}, '
-        'level.tileHeight ${level.tileHeight}, '
-        'level.tileWidth ${level.tileWidth}, '
-        'col $col, row $row, x $x, y $y');
+//    print('Tile class setPosition level.boardTop ${level.boardTop}, '
+//        'level.boardLeft ${level.boardLeft}, '
+//        'level.numberOfRows ${level.numberOfRows}, '
+//        'level.numberOfCols ${level.numberOfCols}, '
+//        'level.tileHeight ${level.tileHeight}, '
+//        'level.tileWidth ${level.tileWidth}, '
+//        'col $col, row $row, x $x, y $y');
   }
 
 
@@ -143,15 +143,15 @@ class Tile extends Object{
 
   void swapRowColWith(Tile destTile){
     int tft = destTile.row;
-    print('Tile class swapRowColWith tft $tft, destTile.row ${destTile.row}');
+//    print('Tile class swapRowColWith tft $tft, destTile.row ${destTile.row}');
     destTile.row = row;
-    print('Tile class swapRowColWith destTile.row ${destTile.row}, row $row');
+//    print('Tile class swapRowColWith destTile.row ${destTile.row}, row $row');
     row = tft;
 
     tft = destTile.col;
-    print('Tile class swapRowColWith tft $tft, destTile.col ${destTile.col}');
+//    print('Tile class swapRowColWith tft $tft, destTile.col ${destTile.col}');
     destTile.col = col;
-    print('Tile class swapRowColWith destTile.col ${destTile.col}, row $col');
+//    print('Tile class swapRowColWith destTile.col ${destTile.col}, row $col');
     col = tft;
   }
 
