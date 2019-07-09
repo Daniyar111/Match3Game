@@ -63,18 +63,18 @@ class Array2d<T>{
     }
     return newArray2d;
   }
+}
 
-  String dumpArray2d(Array2d grid){
+String dumpArray2d(Array2d grid){
 
-    String string = '';
-    for(int row = grid.height; row > 0; row--){
-      List<String> values = <String>[];
-      for(int col = 0; col < grid.width; col++){
-        var cell = grid[row - 1][col];
-        values.add(cell == null ? ' ' : cell.toString());
-      }
-      string += (values.join(' ') + '\n');
+  String string = '';
+  for(int row = grid.height; row > 0; row--){
+    List<String> values = <String>[];
+    for(int col = 0; col < grid.width; col++){
+      var cell = grid[row - 1][col];
+      values.add(cell == null ? ' ' : cell.toString());
     }
-    return string;
+    string += (values.join(' ') + '\n');
   }
+  return string;
 }

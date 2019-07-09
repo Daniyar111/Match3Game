@@ -7,7 +7,7 @@ class Tile{
 
   TileType type;
   int row;
-  int column;
+  int col;
   Level level;
   int depth;
   Widget _widget;
@@ -19,7 +19,7 @@ class Tile{
   Tile({
     this.type,
     this.row = 0,
-    this.column = 0,
+    this.col = 0,
     this.level,
     this.depth = 0,
     this.visible = true
